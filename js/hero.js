@@ -6,17 +6,27 @@ let leftValueWithoutPx = parseInt(leftValue); // .hero의 css중 left의 값에�
 window.addEventListener('keydown', move)
 
 function move(e){
-    if(e.key === 'a' || e.key === 'ㅁ'){
-        hero.style.backgroundPosition = '70px'
-        let toLeft = leftValueWithoutPx -= 5;
-        hero.style.left = toLeft+'px';
-    } else if(e.key === 'd' || e.key === 'ㅇ') {
-        hero.style.backgroundPosition = '35px'
-        let toRight = leftValueWithoutPx += 5;
-        hero.style.left = toRight+'px';
-    } else if(e.key === 's' || e.key ==='ㄴ'){
-        hero.style.backgroundPosition = '0px'
-    } else if(e.key === 'w' || e.key === 'ㅈ'){ 
-        hero.style.backgroundPosition = '105px'
+    if((e.key === 'a'|| e.key ==='ㅁ') && hero.offsetLeft > 0){
+        hero.style.left = (hero.offsetLeft - 5)+'px';
+        hero.style.backgroundPosition = '70px';
+    } else if((e.key === 'd'||e.key ==='ㅇ') && hero.offsetLeft < 770){
+        hero.style.left = (hero.offsetLeft + 5)+'px';
+        hero.style.backgroundPosition = '35px';
     }
-}
+}   
+
+// function move(e){
+//         if(e.key === 'a' || e.key === 'ㅁ'){
+//             hero.style.backgroundPosition = '70px'
+//             let toLeft = leftValueWithoutPx -= 5;
+//             hero.style.left = toLeft+'px';
+//         } else if(e.key === 'd' || e.key === 'ㅇ'){
+//             hero.style.backgroundPosition = '35px'
+//             let toRight = leftValueWithoutPx += 5;
+//             hero.style.left = toRight+'px';
+//         } else if(e.key === 's' || e.key ==='ㄴ'){
+//             hero.style.backgroundPosition = '0px'
+//         } else if(e.key === 'w' || e.key === 'ㅈ'){ 
+//             hero.style.backgroundPosition = '105px'
+//         }
+// }
