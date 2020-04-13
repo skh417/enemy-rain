@@ -4,7 +4,7 @@
 
 .mainSection {
     max-width: 800px;
-    margin:0 auto;
+    margin:50px auto 0 auto;
     display: flex;
     justify-content: center;
 }
@@ -33,4 +33,14 @@
     height: 54px;
     background-image: url(../img/ghost.png);
     background-position: 0px;
+}
+
+.ghostDead {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 45px;
+    height: 54px;
+    background-image: url(../img/ghost.png);
+    background-position: 45px;
 }

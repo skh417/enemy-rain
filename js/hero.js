@@ -7,10 +7,10 @@ window.addEventListener('keydown', move)
 
 function move(e){
     if((e.key === 'a'|| e.key ==='ㅁ') && hero.offsetLeft > 0){
-        hero.style.left = (hero.offsetLeft - 5)+'px';
+        hero.style.left = (hero.offsetLeft - 8)+'px';
         hero.style.backgroundPosition = '70px';
     } else if((e.key === 'd'||e.key ==='ㅇ') && hero.offsetLeft < 770){
-        hero.style.left = (hero.offsetLeft + 5)+'px';
+        hero.style.left = (hero.offsetLeft + 8)+'px';
         hero.style.backgroundPosition = '35px';
     }
 }   
