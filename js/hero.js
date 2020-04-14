@@ -7,11 +7,15 @@ window.addEventListener('keydown', move)
 
 function move(e){
     if((e.key === 'a'|| e.key ==='ㅁ') && hero.offsetLeft > 0){
-        hero.style.left = (hero.offsetLeft - 8)+'px';
+        hero.style.left = (hero.offsetLeft - 20)+'px';
         hero.style.backgroundPosition = '70px';
     } else if((e.key === 'd'||e.key ==='ㅇ') && hero.offsetLeft < 770){
-        hero.style.left = (hero.offsetLeft + 8)+'px';
+        hero.style.left = (hero.offsetLeft + 20)+'px';
         hero.style.backgroundPosition = '35px';
+    } else if(e.key === 's' || e.key ==='ㄴ'){
+        hero.style.backgroundPosition = '0px'
+    } else if(e.key === 'w' || e.key === 'ㅈ'){ 
+         hero.style.backgroundPosition = '105px'
     }
 }   
 

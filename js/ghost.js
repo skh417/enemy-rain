@@ -7,37 +7,41 @@ function createGhost(){
     ghostDiv.style.left = (Math.random() * 750) + 'px'
     //console.log(ghostDiv.getBoundingClientRect().top);
 }
-setInterval(fallingGhost, 10) // 고스트 내려오는 함수
+setInterval(fallingGhost, 10) // 고스트 내려오는 함수 + 땅에 도착하거나 히어로에 부딛히면 고스트가 죽는 함수
 function fallingGhost(){
     const ghost = document.getElementsByClassName('ghost');//고스트 접근
     for(let i = 0; i < ghost.length; i++){
         const goDown = ghost[i].offsetTop + 2;
         if(ghost[i].offsetTop === 550){
+            // let bg = document.getElementsByClassName('bgContainer')[0];
+            // let ghostDead = document.getElementsByClassName('ghostDead')[0];       
             ghost[i].style.backgroundPosition = '45px';
             ghost[i].className = 'ghostDead'
-            let bg = document.getElementsByClassName('bgContainer')[0];
-            let ghostDead = document.getElementsByClassName('ghostDead')[0];
-            setTimeout(() => {
-                bg.removeChild(ghostDead)
-            },1000);   
-  
-  
             // setTimeout(() => {
-            //     removeGhost();
-            // }, 2000);
+            //     bg.removeChild(ghostDead)
+            // },1000);   
+            setTimeout(() => {
+                removeGhost();
+            }, 2000);
+        } else if(ghost[i].offsetTop === 490 && ghost[i].offsetLeft > hero.offsetLeft - 45 && ghost[i].offsetLeft < hero.offsetLeft+35){
+            ghost[i].style.backgroundPosition = '45px';
+            ghost[i].className = 'ghostDead';
+            setTimeout(() => {
+                    removeGhost();
+                }, 2000);
         } else {
             ghost[i].style.top = goDown + 'px';
         }
     }
 }
 
-
 function removeGhost(){
     let ghostDead = document.getElementsByClassName('ghostDead')[0];
-    console.log("ghost dead: ", ghostDead);
     let bg = document.getElementsByClassName('bgContainer')[0];
     bg.removeChild(ghostDead);
 }
+
+
 
 
 
