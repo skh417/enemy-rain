@@ -6,7 +6,23 @@
     max-width: 800px;
     margin:50px auto 0 auto;
     display: flex;
+    position: relative;
     justify-content: center;
+}
+
+.heartContainer {
+    z-index: 1;
+    position: absolute;
+    left:2px;
+    top:2px;
+    font-size: 24px;
+}
+
+i {
+    display: inline-block;
+    color: red;
+    opacity: 0.8;
+    margin:2px;
 }
 
 .bgContainer {
@@ -14,6 +30,29 @@
     align-items: center;
     position: relative;
 }
+
+.invisibleGameOverContainer{
+    width:100%;
+    position: absolute;
+    top:40%;
+    text-align: center;
+    background-color: rgba(192, 57, 43, 0);
+    font-size: 50px;
+    color: rgba(245, 246, 250, 0);
+}
+
+.visibleGameOverContainer{
+    z-index: 2;
+    width:100%;
+    position: absolute;
+    top:40%;
+    text-align: center;
+    background-color: rgba(192, 57, 43,0.8);
+    font-size: 50px;
+    color:rgba(245, 246, 250,1.0);
+    transition: all 0.2s ease-in-out;
+}
+
 
 .hero {
     z-index: 1;
@@ -71,4 +110,17 @@
         transform: scale(1.2);
         opacity: 0;
     }
+}
+
+button {
+ display:none;
+ background-color: rgba(192, 57, 43,0.8);
+ border:none;
+ padding:5px;
+ cursor: pointer;
+ position: absolute;
+ bottom: 2px;
+ right:2px;
+ color:white;
+ outline: none;
 }

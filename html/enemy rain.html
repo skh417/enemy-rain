@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
     <link rel="stylesheet" href="../../enemy-rain/css/enemy rain.css" type="text/css">
     <title>Enemy Rain</title>
 </head>
 <body>
     <section class="mainSection">
-        <div class="bgContainer">
-            <img src="../../enemy-rain/img/bg.png">
-            <div class="hero"></div>
-            <!-- <div class="ghost"></div> -->
+        <div class='heartContainer'>
+          <i class="fa fa-heart"></i>
+          <i class="fa fa-heart"></i>
+          <i class="fa fa-heart"></i>
+          <i class="fa fa-heart"></i>
+          <i class="fa fa-heart"></i>
         </div>
+        <div class="bgContainer">
+          <div class='invisibleGameOverContainer'>
+            <p class='gameOver'>Game Over</p>
+          </div>
+          <img src="../../enemy-rain/img/bg.png">
+          <div class="hero"></div>
+          <!-- <div class="ghost"></div> -->
+        </div>
+        <button type='button'>다시 시작</button>
     </section>
+    <script src='../../enemy-rain/js/controls.js'></script>
     <script src="../../enemy-rain/js/ghost.js"></script>
     <script src="../../enemy-rain/js/hero.js"></script>
 </body>
