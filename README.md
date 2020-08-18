@@ -5,7 +5,7 @@
 
 <a href='https://skh417.github.io/enemy-rain/html/enemy%20rain.html' target="_blank">게임하러 가기</a>
 
-<img src="../img/example.png" alt="example" />
+<img src="./img/example.png" alt="example" />
 
 _게임 방법_
 1. 방향키로 Hero를 움직여 Ghost를 제거합니다.
