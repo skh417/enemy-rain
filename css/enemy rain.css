@@ -16,6 +16,7 @@
 }
 
 .hero {
+    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 400px;
@@ -28,19 +29,46 @@
 .ghost {
     position: absolute;
     top: 0;
-    left: 400px;
     width: 45px;
     height: 54px;
     background-image: url(../img/ghost.png);
     background-position: 0px;
+    animation: flying 0.3s infinite;
+}
+@keyframes flying{
+    from {
+        transform:scale(1);
+    }
+    to{
+        transform: scale(0.9);
+    }
 }
 
 .ghostDead {
     position: absolute;
-    top: 0;
-    left: 400px;
     width: 45px;
     height: 54px;
     background-image: url(../img/ghost.png);
     background-position: 45px;
+}
+
+.ghostAlive {
+    position: absolute;
+    width: 45px;
+    height: 54px;
+    background-image: url(../img/ghost.png);
+    background-position: 0px;
+    animation: attack 0.3s ;
+    opacity: 0;
+}
+
+@keyframes attack {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
