@@ -6,6 +6,7 @@ const gameOverMsg = document.getElementsByClassName(
 )[0];
 const ghostStart = setInterval(createGhost, 3000); // 고스트 출현 반복시간 설정
 const ghostRain = setInterval(fallingGhost, 10); // 고스트 내려오는 속도 설정
+let ghostCount = 0;
 
 // setInterval에 첫번째 인자로 들어갈 고스트 생성 함수 설정
 function createGhost() {
@@ -41,6 +42,8 @@ function fallingGhost() {
     ) {
       ghost[i].style.backgroundPosition = "45px";
       ghost[i].className = "ghostDead";
+      ghostCount += 1;
+      document.getElementsByClassName("ghostCount")[0].innerHTML = ghostCount;
       setTimeout(() => {
         removeGhost(true);
       }, 2000);

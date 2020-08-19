@@ -130,3 +130,12 @@ button {
 button:hover{
   transform: scale(1.1);
 }
+
+p.ghostCountContainer {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  margin: 0;
+  color: white;
+  font-size:20px;
+}

@@ -3,7 +3,6 @@
 const hero = document.getElementsByClassName("hero")[0]; // 히어로
 let heart = document.getElementsByTagName("i");
 // 바닥에 있을때 hero offsetTop = 546 , 맨 위에 있을땐 6
-
 window.addEventListener("keydown", heroControl);
 
 function heroControl(e) {
